@@ -28,4 +28,4 @@ Refer to MyAlertView.h and MyAlertView.m for complete example.
 
 ## TODO
 
-* Currently only supports customization of UIAlertViewStyleDefault.
+* Doesn't support change of font and font size, since title- and message labels' frames seem to be calculated (based on font) before layoutsubviews.
