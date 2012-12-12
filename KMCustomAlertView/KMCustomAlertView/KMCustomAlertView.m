@@ -1,6 +1,6 @@
 //
 //  KMAlertView.m
-//  playing
+//  KMCustomAlertView
 //
 //  Created by Kasper Munck on 12/6/12.
 //  Copyright (c) 2012 KAPPS. All rights reserved.
@@ -9,6 +9,34 @@
 #import "KMCustomAlertView.h"
 
 @implementation KMCustomAlertView
+
+// by analyzing the call stack we know that addSubview is called from the
+// private methods _createTitleLabelIfNeeded and _createBodyTextLabelIfNeeded
+// to add titleLabel and messageLabel, respectively. Size calculations are
+// made after the labels are added so bare injecting our custom font at this
+// point, we make sure that any size calculations are made based on the
+// correct font and size.
+- (void)addSubview:(UIView *)view {
+    NSArray *symbols = [NSThread callStackSymbols];
+    NSString *callingMethod = [symbols objectAtIndex:1];
+    
+    NSRegularExpression *titleLabelRegex = [self regexWithpattern:@"_createTitleLabelIfNeeded"]; 
+    NSRegularExpression *messageLabelRegex = [self regexWithpattern:@"_createBodyTextLabelIfNeeded"];
+    
+    BOOL isTitleLabel = [self doesString:callingMethod regex:titleLabelRegex];
+    BOOL isMessageLabel = [self doesString:callingMethod regex:messageLabelRegex];
+    
+    if ([view isKindOfClass:[UILabel class]]) {
+        if (isTitleLabel)
+            ((UILabel *)view).font = [self titleLabel].font;
+        else if (isMessageLabel)
+            ((UILabel *)view).font = [self messageLabel].font;
+        
+    }
+    
+    [super addSubview:view];
+    
+}
 
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -37,8 +65,15 @@
         } else if ([view isKindOfClass:[UILabel class]]) {
             UILabel *oldLabel = (UILabel *)view;
             UILabel *newLabel = ([oldLabel.text isEqualToString:self.title]) ? [self titleLabel] : [self messageLabel];
+            
             newLabel.frame = oldLabel.frame;
             newLabel.text = oldLabel.text;
+            
+            newLabel.numberOfLines = oldLabel.numberOfLines;
+            newLabel.lineBreakMode = oldLabel.lineBreakMode;
+            newLabel.adjustsFontSizeToFitWidth = oldLabel.adjustsFontSizeToFitWidth;
+            newLabel.adjustsLetterSpacingToFitWidth = oldLabel.adjustsLetterSpacingToFitWidth;
+            
             
             [self addSubview:newLabel];
             [oldLabel removeFromSuperview];
@@ -55,6 +90,9 @@
         }
     }
 }
+
+#pragma mark -
+#pragma mark Helpers
 
 - (NSInteger)cancelButtonTag {
     NSInteger numberOfButtons = self.numberOfButtons;
@@ -75,6 +113,23 @@
     
     return cancelButtonTag;
 }
+
+- (NSRegularExpression *)regexWithpattern:(NSString *)pattern {
+    return [NSRegularExpression regularExpressionWithPattern:pattern
+                                                     options:0
+                                                       error:nil];
+}
+
+- (BOOL)doesString:(NSString *)str regex:(NSRegularExpression *)regex {
+    return [regex numberOfMatchesInString:str options:0 range:NSMakeRange(0, str.length)];
+}
+
+- (void)assertAbstractSelector:(SEL)selector {
+    NSAssert(NO, @"%@: %@ must be overriden by subclasses.", NSStringFromClass([self class]), NSStringFromSelector(selector));
+}
+
+#pragma mark -
+#pragma mark Abstract Methods
 
 - (UILabel *)titleLabel {
     [self assertAbstractSelector:_cmd];
@@ -102,10 +157,6 @@
 - (UIView *)backgroundView {
     [self assertAbstractSelector:_cmd];
     return nil;
-}
-
-- (void)assertAbstractSelector:(SEL)selector {
-    NSAssert(NO, @"%@: %@ must be overriden by subclasses.", NSStringFromClass([self class]), NSStringFromSelector(selector));
 }
 
 @end

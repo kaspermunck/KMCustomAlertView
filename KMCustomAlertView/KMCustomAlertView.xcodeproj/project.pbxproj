@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A748457716780EBC0073BEFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A748457616780EBC0073BEFF /* UIKit.framework */; };
+		A748457916780EBC0073BEFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A748457816780EBC0073BEFF /* Foundation.framework */; };
+		A748457B16780EBC0073BEFF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A748457A16780EBC0073BEFF /* CoreGraphics.framework */; };
+		A748458116780EBC0073BEFF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A748457F16780EBC0073BEFF /* InfoPlist.strings */; };
+		A748458316780EBC0073BEFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A748458216780EBC0073BEFF /* main.m */; };
+		A748458716780EBC0073BEFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A748458616780EBC0073BEFF /* AppDelegate.m */; };
+		A748458916780EBC0073BEFF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A748458816780EBC0073BEFF /* Default.png */; };
+		A748458B16780EBC0073BEFF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A748458A16780EBC0073BEFF /* Default@2x.png */; };
+		A748458D16780EBC0073BEFF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A748458C16780EBC0073BEFF /* Default-568h@2x.png */; };
+		A748459016780EBC0073BEFF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A748458E16780EBC0073BEFF /* MainStoryboard.storyboard */; };
+		A748459316780EBC0073BEFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A748459216780EBC0073BEFF /* ViewController.m */; };
+		A748459D16780EEA0073BEFF /* KMCustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A748459A16780EEA0073BEFF /* KMCustomAlertView.m */; };
+		A748459E16780EEA0073BEFF /* MyAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A748459C16780EEA0073BEFF /* MyAlertView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A748457216780EBC0073BEFF /* KMCustomAlertView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMCustomAlertView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A748457616780EBC0073BEFF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A748457816780EBC0073BEFF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A748457A16780EBC0073BEFF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A748457E16780EBC0073BEFF /* KMCustomAlertView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KMCustomAlertView-Info.plist"; sourceTree = "<group>"; };
+		A748458016780EBC0073BEFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A748458216780EBC0073BEFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A748458416780EBC0073BEFF /* KMCustomAlertView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KMCustomAlertView-Prefix.pch"; sourceTree = "<group>"; };
+		A748458516780EBC0073BEFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A748458616780EBC0073BEFF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A748458816780EBC0073BEFF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A748458A16780EBC0073BEFF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A748458C16780EBC0073BEFF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A748458F16780EBC0073BEFF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		A748459116780EBC0073BEFF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A748459216780EBC0073BEFF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A748459916780EEA0073BEFF /* KMCustomAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMCustomAlertView.h; sourceTree = "<group>"; };
+		A748459A16780EEA0073BEFF /* KMCustomAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMCustomAlertView.m; sourceTree = "<group>"; };
+		A748459B16780EEA0073BEFF /* MyAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAlertView.h; sourceTree = "<group>"; };
+		A748459C16780EEA0073BEFF /* MyAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAlertView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A748456F16780EBC0073BEFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A748457716780EBC0073BEFF /* UIKit.framework in Frameworks */,
+				A748457916780EBC0073BEFF /* Foundation.framework in Frameworks */,
+				A748457B16780EBC0073BEFF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A748456716780EBC0073BEFF = {
+			isa = PBXGroup;
+			children = (
+				A748457C16780EBC0073BEFF /* KMCustomAlertView */,
+				A748457516780EBC0073BEFF /* Frameworks */,
+				A748457316780EBC0073BEFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A748457316780EBC0073BEFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A748457216780EBC0073BEFF /* KMCustomAlertView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A748457516780EBC0073BEFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A748457616780EBC0073BEFF /* UIKit.framework */,
+				A748457816780EBC0073BEFF /* Foundation.framework */,
+				A748457A16780EBC0073BEFF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A748457C16780EBC0073BEFF /* KMCustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				A748459916780EEA0073BEFF /* KMCustomAlertView.h */,
+				A748459A16780EEA0073BEFF /* KMCustomAlertView.m */,
+				A748459B16780EEA0073BEFF /* MyAlertView.h */,
+				A748459C16780EEA0073BEFF /* MyAlertView.m */,
+				A748458516780EBC0073BEFF /* AppDelegate.h */,
+				A748458616780EBC0073BEFF /* AppDelegate.m */,
+				A748458E16780EBC0073BEFF /* MainStoryboard.storyboard */,
+				A748459116780EBC0073BEFF /* ViewController.h */,
+				A748459216780EBC0073BEFF /* ViewController.m */,
+				A748457D16780EBC0073BEFF /* Supporting Files */,
+			);
+			path = KMCustomAlertView;
+			sourceTree = "<group>";
+		};
+		A748457D16780EBC0073BEFF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A748457E16780EBC0073BEFF /* KMCustomAlertView-Info.plist */,
+				A748457F16780EBC0073BEFF /* InfoPlist.strings */,
+				A748458216780EBC0073BEFF /* main.m */,
+				A748458416780EBC0073BEFF /* KMCustomAlertView-Prefix.pch */,
+				A748458816780EBC0073BEFF /* Default.png */,
+				A748458A16780EBC0073BEFF /* Default@2x.png */,
+				A748458C16780EBC0073BEFF /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A748457116780EBC0073BEFF /* KMCustomAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A748459616780EBC0073BEFF /* Build configuration list for PBXNativeTarget "KMCustomAlertView" */;
+			buildPhases = (
+				A748456E16780EBC0073BEFF /* Sources */,
+				A748456F16780EBC0073BEFF /* Frameworks */,
+				A748457016780EBC0073BEFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KMCustomAlertView;
+			productName = KMCustomAlertView;
+			productReference = A748457216780EBC0073BEFF /* KMCustomAlertView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A748456916780EBC0073BEFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = KAPPS;
+			};
+			buildConfigurationList = A748456C16780EBC0073BEFF /* Build configuration list for PBXProject "KMCustomAlertView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A748456716780EBC0073BEFF;
+			productRefGroup = A748457316780EBC0073BEFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A748457116780EBC0073BEFF /* KMCustomAlertView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A748457016780EBC0073BEFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A748458116780EBC0073BEFF /* InfoPlist.strings in Resources */,
+				A748458916780EBC0073BEFF /* Default.png in Resources */,
+				A748458B16780EBC0073BEFF /* Default@2x.png in Resources */,
+				A748458D16780EBC0073BEFF /* Default-568h@2x.png in Resources */,
+				A748459016780EBC0073BEFF /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A748456E16780EBC0073BEFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A748458316780EBC0073BEFF /* main.m in Sources */,
+				A748458716780EBC0073BEFF /* AppDelegate.m in Sources */,
+				A748459316780EBC0073BEFF /* ViewController.m in Sources */,
+				A748459D16780EEA0073BEFF /* KMCustomAlertView.m in Sources */,
+				A748459E16780EEA0073BEFF /* MyAlertView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A748457F16780EBC0073BEFF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A748458016780EBC0073BEFF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A748458E16780EBC0073BEFF /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A748458F16780EBC0073BEFF /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A748459416780EBC0073BEFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A748459516780EBC0073BEFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A748459716780EBC0073BEFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KMCustomAlertView/KMCustomAlertView-Prefix.pch";
+				INFOPLIST_FILE = "KMCustomAlertView/KMCustomAlertView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A748459816780EBC0073BEFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KMCustomAlertView/KMCustomAlertView-Prefix.pch";
+				INFOPLIST_FILE = "KMCustomAlertView/KMCustomAlertView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A748456C16780EBC0073BEFF /* Build configuration list for PBXProject "KMCustomAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A748459416780EBC0073BEFF /* Debug */,
+				A748459516780EBC0073BEFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A748459616780EBC0073BEFF /* Build configuration list for PBXNativeTarget "KMCustomAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A748459716780EBC0073BEFF /* Debug */,
+				A748459816780EBC0073BEFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A748456916780EBC0073BEFF /* Project object */;
+}

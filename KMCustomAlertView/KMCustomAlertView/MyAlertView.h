@@ -1,6 +1,6 @@
 //
 //  MyAlertView.h
-//  playing
+//  KMCustomAlertView
 //
 //  Created by Kasper Munck on 12/8/12.
 //  Copyright (c) 2012 KAPPS. All rights reserved.
