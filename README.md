@@ -23,5 +23,3 @@ UIAlertView *alertView = [[MyAlertView alloc] initWithTitle:@"title string"
                                           cancelButtonTitle:@"cancel"
                                           otherButtonTitles:@"other 1", nil];
 ```
-
-Refer to MyAlertView.h and MyAlertView.m for complete example.
