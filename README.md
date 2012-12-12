@@ -23,3 +23,7 @@ UIAlertView *alertView = [[MyAlertView alloc] initWithTitle:@"title string"
                                           cancelButtonTitle:@"cancel"
                                           otherButtonTitles:@"other 1", nil];
 ```
+
+![Custom UIAlertView][preview1]
+
+[preview1]: http://github.muncken.dk/kmcustomalertview/alert1.png "KMCustomAlertView"
