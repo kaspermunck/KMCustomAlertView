@@ -25,7 +25,3 @@ UIAlertView *alertView = [[MyAlertView alloc] initWithTitle:@"title string"
 ```
 
 Refer to MyAlertView.h and MyAlertView.m for complete example.
-
-## TODO
-
-* Currently only supports customization of UIAlertViewStyleDefault.
