@@ -10,12 +10,12 @@
 
 @implementation KMCustomAlertView
 
-// by analyzing the call stack we know that addSubview is called from the
+// by analyzing the call stack we find that addSubview is called from the
 // private methods _createTitleLabelIfNeeded and _createBodyTextLabelIfNeeded
-// to add titleLabel and messageLabel, respectively. Size calculations are
-// made after the labels are added so bare injecting our custom font at this
-// point, we make sure that any size calculations are made based on the
-// correct font and size.
+// to add titleLabel and messageLabel, respectively. size calculations are
+// made after the labels are added as subviews, but before layoutSubview
+// is called, so by injecting our custom font at this point, we make sure
+// that any size calculations are based on the correct font and size.
 - (void)addSubview:(UIView *)view {
     NSArray *symbols = [NSThread callStackSymbols];
     NSString *callingMethod = [symbols objectAtIndex:1];
@@ -35,7 +35,6 @@
     }
     
     [super addSubview:view];
-    
 }
 
 - (void)layoutSubviews {
