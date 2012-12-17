@@ -8,30 +8,20 @@
 
 #import "KMCustomAlertView.h"
 
+@interface KMCustomAlertView()
+{
+    BOOL _hasInjectedCustomFonts;
+}
+@end
+
 @implementation KMCustomAlertView
 
-// by analyzing the call stack we find that addSubview is called from the
-// private methods _createTitleLabelIfNeeded and _createBodyTextLabelIfNeeded
-// to add titleLabel and messageLabel, respectively. size calculations are
-// made after the labels are added as subviews, but before layoutSubview
-// is called, so by injecting our custom font at this point, we make sure
-// that any size calculations are based on the correct font and size.
 - (void)addSubview:(UIView *)view {
-    NSArray *symbols = [NSThread callStackSymbols];
-    NSString *callingMethod = [symbols objectAtIndex:1];
-    
-    NSRegularExpression *titleLabelRegex = [self regexWithpattern:@"_createTitleLabelIfNeeded"]; 
-    NSRegularExpression *messageLabelRegex = [self regexWithpattern:@"_createBodyTextLabelIfNeeded"];
-    
-    BOOL isTitleLabel = [self doesString:callingMethod regex:titleLabelRegex];
-    BOOL isMessageLabel = [self doesString:callingMethod regex:messageLabelRegex];
-    
-    if ([view isKindOfClass:[UILabel class]]) {
-        if (isTitleLabel)
-            ((UILabel *)view).font = [self titleLabel].font;
-        else if (isMessageLabel)
-            ((UILabel *)view).font = [self messageLabel].font;
-        
+    if (!_hasInjectedCustomFonts) {
+        UILabel *labelTitle = [self valueForKey:@"_titleLabel"];
+        UILabel *labelMessage = [self valueForKey:@"_bodyTextLabel"];
+        labelTitle.font = [self titleLabel].font;
+        labelMessage.font = [self messageLabel].font;
     }
     
     [super addSubview:view];
@@ -111,16 +101,6 @@
     }
     
     return cancelButtonTag;
-}
-
-- (NSRegularExpression *)regexWithpattern:(NSString *)pattern {
-    return [NSRegularExpression regularExpressionWithPattern:pattern
-                                                     options:0
-                                                       error:nil];
-}
-
-- (BOOL)doesString:(NSString *)str regex:(NSRegularExpression *)regex {
-    return [regex numberOfMatchesInString:str options:0 range:NSMakeRange(0, str.length)];
 }
 
 - (void)assertAbstractSelector:(SEL)selector {

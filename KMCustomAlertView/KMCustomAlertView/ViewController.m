@@ -19,8 +19,8 @@
     UIAlertView *alert = [[MyAlertView alloc] initWithTitle:@"Custom UIAlertView"
                                                     message:@"Hurra, this is a custom alert view. Now it's time to style those alerts!"
                                                    delegate:nil
-                                          cancelButtonTitle:nil
-                                          otherButtonTitles:@"other", @"cancel", @"yo", nil];
+                                          cancelButtonTitle:@"cancel"
+                                          otherButtonTitles:@"other", nil];
     [alert show];
 }
 

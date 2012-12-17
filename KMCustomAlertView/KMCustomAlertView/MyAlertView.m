@@ -23,6 +23,8 @@
     UILabel *label = [[UILabel alloc] init];
     label.textColor = [UIColor blueColor];
     label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont fontWithName:@"HelveticaNeue" size:30];
+    label.textAlignment = NSTextAlignmentCenter;
     
     return label;
 }
