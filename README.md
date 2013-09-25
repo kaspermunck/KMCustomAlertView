@@ -2,6 +2,8 @@
 
 Customizable UIAlertVIew subclass. Easily customize labels, buttons and background of a UIAlertView.
 
+NOTE: Is not verified to work in iOS 7.
+
 ## How do I use it?
 
 Easy as pie. Copy KMCustomAlertView.h and KMCustomAlertView.m into your project. Subclass KMCustomAlertView and overwrite the following methods:
